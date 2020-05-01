@@ -1,5 +1,3 @@
-balance = [0]
-
 class Account():
     
     def __init__(self, owner, balance):
@@ -15,6 +13,16 @@ class Account():
             print("\n Amount Deposited: ", deposit_amount, "\n Your new balance: ", self.balance)
             break 
    
-   #next step is for me to keep a count of the new balances after each deposit and to update the balance class
-   #Maybe create a class just called Update balance and Use a for loop and empty list to update the list after each deposit or withdraw
-   #also need to create a withdraw class that wont over draw the balance. So i need to place a if statement that if X < balance..... 
+    def withdraw(self):
+        withdraw_amount =float(input('How Much would you like to Withdraw? '))
+        
+        if self.balance >= withdraw_amount: 
+            self.balance -= withdraw_amount
+            print("\n Amount Withdrawn: ", withdraw_amount, "\n Your new balance: ", self.balance)
+             
+        else:
+            print ( "\n Insufficient Balance  ")
+            
+#all finished!!! 
+#I need to remeber to use the += cause i made it so much more complicated than it needed to be. 
+#I was trying to create a list of all the past deposits and then iterate through that list and then readd the list to get the new balance. Dont be dumb. Seriously think simply
