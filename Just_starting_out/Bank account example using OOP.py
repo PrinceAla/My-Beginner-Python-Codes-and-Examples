@@ -8,7 +8,7 @@ class Account():
     def deposit(self):
         deposit_amount =float(input('How Much would you like to deposit? '))
         
-        while deposit_amount > 0:
+        if deposit_amount > 0:
             self.balance += deposit_amount
             print("\n Amount Deposited: ", deposit_amount, "\n Your new balance: ", self.balance)
             break 
